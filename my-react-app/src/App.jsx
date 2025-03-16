@@ -16,6 +16,7 @@ import Admin from "./components/Adminpage.jsx";
 import Chatbot from "./components/Chatbot";
 
 
+
 function App() {
   return (
     <Router>
@@ -44,6 +45,7 @@ function App() {
         <Route path="/admin@tpg" element={<Admin />}/>
         <Route path="/chat" element={<Chatbot />} />
       </Routes>
+      <Chatbot />
     </Router>
     
   );
