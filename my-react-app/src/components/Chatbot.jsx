@@ -9,6 +9,9 @@ const Chatbot = () => {
   const [isOpen, setIsOpen] = useState(false); // For toggling the chatbot window
   const navigate = useNavigate();
 
+
+
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (userInput.trim()) {
@@ -37,9 +40,8 @@ const Chatbot = () => {
 
   return (
     <div className={`chatbot-container ${isOpen ? "open" : ""}`}>
-      {/* Toggle button */}
       <button className="chat-toggle" onClick={() => setIsOpen(!isOpen)}>
-        {isOpen ? "✖️" : "💬"}
+        {isOpen ? "X" : "💬"}
       </button>
 
       {isOpen && (
@@ -53,7 +55,7 @@ const Chatbot = () => {
                 <p>
                   <strong className="bot">Bot:</strong> {chat.bot}
                 </p>
-              </div>
+              </div> 
             ))}
           </div>
           <form onSubmit={handleSubmit} className="chat-form">

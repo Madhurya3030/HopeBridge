@@ -22,7 +22,7 @@ function Header() {
 
   return (
     <header className="header">
-      <img src="bg.png" alt="Logo" className="logo" />
+      <img src="HDDD.png" alt="Logo" className="logo" />
       <nav className="nav">
         <a onClick={navigate("./")}>Home</a>
 

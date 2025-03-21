@@ -18,7 +18,7 @@ const AdminPage = () => {
       }
     };
 
-    fetchReports();
+    fetchReports(); 
   }, []);
 
   return (

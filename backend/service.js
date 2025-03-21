@@ -13,8 +13,12 @@ const predefinedResponses = {
 const generateResponse = async (prompt) => {
   try {
     
-    if (predefinedResponses[prompt.toLowerCase()]) {
-      return predefinedResponses[prompt.toLowerCase()];
+    const matchedKey = Object.keys(predefinedResponses).find((key) =>
+      prompt.toLowerCase().includes(key)
+    );
+
+    if (matchedKey) {
+      return predefinedResponses[matchedKey];
     }
 
     

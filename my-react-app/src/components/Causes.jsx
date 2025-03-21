@@ -1,7 +1,14 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 import './Causes.css';
 
 function Causes() {
+  const navigate = useNavigate(); 
+
+  const handledonate = () => {
+    navigate("/donate");
+  };
+
   return (
     <section className="causes" id="causes">
       <h2>SUPPORT A CAUSE</h2>
@@ -15,7 +22,8 @@ function Causes() {
             <div className="progress" style={{ width: '50%' }}></div>
           </div>
           <p>₹50,000 raised out of ₹1,00,000</p>
-          <button className="donate-button">Donate Now</button>
+          <button className="donate-button" onClick={handledonate}>Donate Now</button>
+
         </div>
         
         <div className="cause-card">
@@ -26,7 +34,7 @@ function Causes() {
             <div className="progress" style={{ width: '60%' }}></div>
           </div>
           <p>₹50,000 raised out of ₹1,00,000</p>
-          <button className="donate-button">Donate Now</button>
+          <button className="donate-button" onClick={handledonate}>Donate Now</button>
         </div>
 
         <div className="cause-card">
@@ -37,7 +45,7 @@ function Causes() {
             <div className="progress" style={{ width: '40%' }}></div>
           </div>
           <p>₹50,000 raised out of ₹1,00,000</p>
-          <button className="donate-button">Donate Now</button>
+          <button className="donate-button" onClick={handledonate}>Donate Now</button>
         </div>
 
       </div>
