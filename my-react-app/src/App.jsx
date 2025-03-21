@@ -14,6 +14,7 @@ import Stories from "./components/stories.jsx";
 import Partner from "./components/Partner.jsx";
 import Admin from "./components/Adminpage.jsx";
 import Chatbot from "./components/Chatbot";
+import Donate from "./components/donate.jsx";
 
 
 function App() {
@@ -43,7 +44,9 @@ function App() {
         <Route path="/report" element={<Reportcase />}/>
         <Route path="/admin@tpg" element={<Admin />}/>
         <Route path="/chat" element={<Chatbot />} />
+        <Route path="/donate" element={<Donate />} />
       </Routes>
+      <Chatbot />
     </Router>
     
   );

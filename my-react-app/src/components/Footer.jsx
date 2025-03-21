@@ -27,7 +27,7 @@ function Footer() {
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; 2025 Your Organization. All rights reserved.</p>
+        <p>&copy; 2025 HopeBridge. All rights reserved.</p>
       </div>
     </footer>
   );

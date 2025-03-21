@@ -8,7 +8,7 @@ function Header() {
   return (
     <header className="header">
       <div className="logo">
-      <img src="bg.png" alt="Logo" className="logo" />
+      <img src="HDDD.png" alt="Logo" className="logo" />
       </div>
       <nav className="nav"> 
         <div className="button-container">
