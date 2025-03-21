@@ -1,33 +1,41 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // React Router for navigation
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Carousel.css";
 
 const images = [
-  "1.jpg",
-  "2.jpg",
-  "3.png",
+  { src: "1.jpg", link: "/donate" },
+  { src: "2.jpg", link: "/donate" },
+  { src: "3.png", link: "/donate" },
 ];
 
-const Carousel = () => { 
+const Carousel = () => {
+  const navigate = useNavigate();
+
   const settings = {
-    dots: true, // Show dots navigation
-    infinite: true, // Infinite loop scrolling
-    speed: 500, // Transition speed
-    slidesToShow: 1, // Show only one image at a time
-    slidesToScroll: 1, // Scroll one image at a time
-    autoplay: true, // Enable automatic sliding
-    autoplaySpeed: 2000, // Change slide every 3 seconds
-    arrows: true, // Show left and right arrows
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: true,
   };
 
   return (
     <div className="carousel-container">
       <Slider {...settings}>
-        {images.map((src, index) => (
-          <div key={index} className="slide">
-            <img src={src} alt={`Slide ${index + 1}`} />
+        {images.map((item, index) => (
+          <div
+            key={index}
+            className="slide"
+            onClick={() => navigate(item.link)} // Navigate on click
+            style={{ cursor: "pointer" }} // Indicate clickable items
+          >
+            <img src={item.src} alt={`Slide ${index + 1}`} />
           </div>
         ))}
       </Slider>

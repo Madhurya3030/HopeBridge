@@ -72,3 +72,18 @@ h2 {
     height: 50px;
   }
 }
+.verify-btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  color: white;
+}
+
+.verified {
+  background-color: green;
+}
+
+.unverified {
+  background-color: red;
+}

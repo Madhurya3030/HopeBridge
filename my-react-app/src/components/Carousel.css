@@ -1,8 +1,9 @@
 .carousel-container {
     width: 15250x; /* Make it full-width */
-    max-width: 99vw; /* Ensure it stretches across the viewport */
-    margin: 0 auto; /* Center align */
+    max-width: 99vw; 
+    margin-top:80px;/* Ensure it stretches across the viewport */ /* Center align */
     overflow: hidden;
+    margin-bottom:0px;
 }
 
 /* Ensure images take up the full width */

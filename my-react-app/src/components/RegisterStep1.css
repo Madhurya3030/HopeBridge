@@ -50,15 +50,15 @@ input:focus {
   box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.2);
 }
 
-.otp-btn, .submit-btn {
-  width: 100%;
+.otp-btn {
+  width: 500px;
   padding: 12px;
   font-size: 12px;
   font-weight: 600;
   border: none;
   border-radius: 6px;
-  cursor: pointer;
-  margin-left : 12px;
+  cursor: pointer; 
+  margin-left : 9px;
   transition: background-color 0.3s ease;
 }
 
@@ -70,7 +70,7 @@ input:focus {
 
 .otp-btn:hover {
   background-color: #e35b5b;
-}
+} 
 
 .submit-btn {
   background-color: #28a745;
