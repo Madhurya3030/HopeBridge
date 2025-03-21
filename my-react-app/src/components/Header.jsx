@@ -17,7 +17,9 @@ function Header() {
     <header className="header">
       <img src="HDDD.png" alt="Logo" className="logo" />
       <nav className="nav">
-        <a onClick={navigate("./")}>Home</a>
+      <a onClick={() => navigate("/")} style={{ cursor: "pointer" }}>
+      Home
+    </a>
 
         <a onClick={(e) => { e.preventDefault(); scrollToSection('about'); }} style={{ cursor: 'pointer' }}>
           About Us

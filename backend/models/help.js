@@ -12,7 +12,8 @@ const reportCaseSchema = new mongoose.Schema({
   earnings: { type: Number, required: true },
   sufficientFood: { type: Boolean, required: true },
   needHelp: { type: String, enum: ["yes", "no"], required: true },
-  photo: { type: String }, // Stores the filename or URL of the uploaded image
+  photo: { type: String },
+  verified: { type: Boolean, default: false } // Stores the filename or URL of the uploaded image
 }, { timestamps: true });
 
 module.exports = mongoose.model("ReportCase", reportCaseSchema);

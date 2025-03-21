@@ -28,7 +28,7 @@
   }
   
   .form-group {
-    width: 100%;
+  width: 600px;
   margin-bottom: 18px;
   text-align: left;
   }
@@ -42,7 +42,7 @@
   }
   
   input {
-    width: 100%;
+  width: 50px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
@@ -56,14 +56,14 @@
   }
   
  .submit-btn {
-    width: 100%;
+    width: 500px;
     padding: 12px;
     font-size: 12px;
     font-weight: 600;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    margin-left : 12px;
+    margin-left : 3px;
     transition: background-color 0.3s ease;
   }
  

@@ -138,7 +138,7 @@ const Reportcase = () => {
         name="name" 
         value={formData.name} 
         onChange={handleChange} 
-        placeholder="Enter your name" 
+        placeholder="Enter the name" 
       />
       {errors.name && <p className="error-text">{errors.name}</p>}
     </div>
@@ -150,7 +150,7 @@ const Reportcase = () => {
         name="age" 
         value={formData.age} 
         onChange={handleChange} 
-        placeholder="Enter your age" 
+        placeholder="Enter the age" 
       />
       {errors.age && <p className="error-text">{errors.age}</p>}
     </div>
@@ -237,7 +237,7 @@ const Reportcase = () => {
         name="address" 
         value={formData.address} 
         onChange={handleChange} 
-        placeholder="Enter your address" 
+        placeholder="Enter the address" 
       />
       {errors.address && <p className="error-text">{errors.address}</p>}
     </div>
@@ -247,8 +247,8 @@ const Reportcase = () => {
       <input 
         type="text" 
         name="location" 
-        value={formData.location} 
-        readOnly 
+        value={formData.location}  
+        onChange={handleChange}
         placeholder="Location will be auto-filled" 
       />
       {errors.location && <p className="error-text">{errors.location}</p>}
@@ -261,7 +261,7 @@ const Reportcase = () => {
         name="earnings" 
         value={formData.earnings} 
         onChange={handleChange} 
-        placeholder="Enter your earnings" 
+        placeholder="Enter the earnings" 
       />
       {errors.earnings && <p className="error-text">{errors.earnings}</p>}
     </div>
