@@ -25,6 +25,7 @@ const Reportcase = () => {
   const [preview, setPreview] = useState(null);
   const navigate = useNavigate();
 
+
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData({
@@ -41,20 +42,27 @@ const Reportcase = () => {
         async (position) => {
           const { latitude, longitude } = position.coords;
           try {
+            const apiKey = "d237bf2ed7174026ba6a7bf0200b20ba";
             const response = await fetch(
-              `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}&accept-language=en`
+              `https://api.opencagedata.com/geocode/v1/json?q=${latitude}+${longitude}&key=${apiKey}`
             );
             const data = await response.json();
-  
-            if (data.address) {
-              const locationName = data.address.town || 
-                                   data.address.village || 
-                                   data.address.city || 
-                                   "Unknown Location";
-  
+
+            if (data.results.length > 0) {
+              const locationName =
+                data.results[0].components.city ||
+                data.results[0].components.town ||
+                data.results[0].components.village ||
+                "Unknown Location";
+
               setFormData((prevData) => ({
                 ...prevData,
                 location: locationName,
+              }));
+            } else {
+              setFormData((prevData) => ({
+                ...prevData,
+                location: "Location not found",
               }));
             }
           } catch (error) {
@@ -81,7 +89,6 @@ const Reportcase = () => {
       }));
     }
   }, []);
-  
 
 
   const handlePhotoChange = (e) => {
