@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "./AdminPage.css";
+import "./Adminpage.css";
 
 const AdminPage = () => {
   const [reports, setReports] = useState([]);
