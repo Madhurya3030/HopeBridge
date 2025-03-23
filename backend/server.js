@@ -32,3 +32,7 @@ app.use("/", chatRoutes);
 
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => console.log(`Backend running at http://localhost:${PORT}`));
+app.get('/', (req, res) => {
+    res.send('Backend is working');
+  });
+  
