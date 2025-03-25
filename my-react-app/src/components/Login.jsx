@@ -35,9 +35,8 @@ function Login() {
         navigate("/admin@tpg");
         return;
       }
-      const API_URL = process.env.REACT_APP_API_URL;
       try {
-        const response = await axios.post(`${API_URL}/login`, {
+        const response = await axios.post("http://localhost:4000/login", {
           username: formData.username,
           password: formData.password,
         });
